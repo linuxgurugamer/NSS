@@ -1,0 +1,227 @@
+PART
+{
+	name = A300 Left Gear
+	module = Part
+	author = Nookos
+MODEL
+{
+	model = Airbus/Parts/A300/A300_LeftGear
+}
+	scale = 1.0
+	rescaleFactor = 1.0
+	node_stack_gear = 0, 0, 0, 0.0, 0.0, -1.0, 1
+	TechRequired = heavyAerodynamics
+	entryCost = 6400
+	cost = 1200
+	category = Utility
+	subcategory = 0
+	title = A300 Left Gear
+	manufacturer = Airbus
+	description = Shmeh
+	attachRules = 1,0,1,1,1
+	mass = 0.6
+	thermalMassModifier = 4.0 
+	emissiveConstant = 0.95
+	dragModelType = default
+	maximum_drag = 0.2
+	minimum_drag = 0.1
+	angularDrag = 0.5
+	maxTemp = 2700
+	crashTolerance = 70
+	breakingForce = 50
+	breakingTorque = 50
+	//MODULE
+	//{
+	//	name = ModuleLandingGear
+	//	animationName = GearAnim
+	//	BrakeTorque = 12
+	//	BrakeSpeed = 3
+	//	startingState = DEPLOYED
+	//	wheelName = wheel
+	//	StartDeployed = true
+//		reverseAnimation = true
+	//}
+
+
+EFFECTS
+	{
+		deploy
+		{
+			AUDIO
+			{
+				channel = Ship
+				clip = Squad/Sounds/elev_start
+				volume = 0 0
+				volume = 1 0.7
+				pitch = 0.75
+			}
+			AUDIO_LOOP
+			{
+				channel = Ship
+				clip = Squad/Sounds/elev_loop
+				volume = 0 0
+				volume = 1 0.7
+				pitch = 0.55
+			}
+		}
+		deployed
+		{
+			AUDIO
+			{
+				channel = Ship
+				clip = Squad/Sounds/elev_stop
+				volume = 0 0
+				volume = 1 0.7
+				pitch = 0.50
+			}
+		}
+		retract
+		{
+			AUDIO
+			{
+				channel = Ship
+				clip = Squad/Sounds/elev_stop
+				volume = 0 0
+				volume = 1 0.7
+				pitch = 0.60
+			}
+			AUDIO_LOOP
+			{
+				channel = Ship
+				clip = Squad/Sounds/elev_loop
+				volume = 0 0
+				volume = 1 0.7
+				pitch = 0.50
+			}
+		}
+		retracted
+		{
+			AUDIO
+			{
+				channel = Ship
+				clip = Squad/Sounds/elev_start
+				volume = 0 0
+				volume = 1 0.7
+				pitch = 0.75
+			}
+		}
+	}
+MODULE
+	{
+		name = ModuleWheelBase
+		
+		wheelColliderTransformName = wheelCollider
+		wheelTransformName = A300_64_LeftGearMain
+		
+		wheelType = FREE
+
+		// setting this to true will override the radius and center parameters
+		FitWheelColliderToMesh = False		
+		radius = 0.475
+		center = 0,0,0
+		mass = 0.160
+		groundHeightOffset = 3.25
+				
+		TooltipTitle = Retractable Landing Gear
+		TooltipPrimaryField = Retractable
+	}
+MODULE
+	{
+		name = ModuleWheelSuspension
+		baseModuleIndex = 0
+		suspensionTransformName = LeftGeer_Steering002
+		suspensionColliderName = suspensionParent
+		
+		suspensionDistance = 0.5
+		targetPosition = 0.8		
+		springRatio = 18
+		damperRatio = 2.0
+	}	
+	MODULE
+	{
+		name = ModuleWheelBrakes
+		baseModuleIndex = 0
+		
+		maxBrakeTorque = 32
+		brakeResponse = 1
+		
+		statusLightModuleIndex = 6
+	}
+
+	MODULE
+	{
+		name = ModuleWheelDeployment
+		baseModuleIndex = 0
+		
+		animationTrfName = A300_64_LeftGear 1
+		animationStateName = GearAnim
+		deployedPosition = 0
+		deployTargetTransformName = wheelCollider
+		
+		TsubSys = 1.0
+		useStandInCollider = True
+		slaveModules = 8
+		
+		fxDeploy = deploy
+		fxRetract = retract
+		fxDeployed = deployed
+		fxRetracted = retracted
+	}
+MODULE
+	{
+		name = ModuleWheelBogey
+		baseModuleIndex = 0
+		
+		wheelTransformRefName = wheelCollider
+		wheelTransformBaseName = wheelCollider
+		bogeyTransformName = LeftGear_Steering002
+		bogeyRefTransformName = wheelCollider
+		deployModuleIndex = 3
+		
+		maxPitch = 25
+		minPitch = -25
+		restPitch = -25
+		pitchResponse = 100
+		
+		bogeyAxis = 1, 0, 0
+	}
+	//MODULE
+	//{
+	//	name = FXModuleLookAtConstraint
+	//	CONSTRAINLOOKFX
+	//	{
+	//		targetName = wheelCollider
+	//		rotatorsName = link1
+	//	}
+	//	CONSTRAINLOOKFX
+	//	{
+	//		targetName = anchor1
+	//		rotatorsName = link2
+	//	}
+	//}
+MODULE
+	{
+		name = ModuleWheelDamage
+		baseModuleIndex = 0
+		
+		stressTolerance = 55000
+		impactTolerance = 13000
+		deflectionMagnitude = 10
+		deflectionSharpness = 2.0
+		slipMagnitude = 15
+		slipSharpness = 2.0
+		explodeMultiplier = 1.0
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		dragCubeName = Deployed
+		dragModifier = 2
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		dragCubeName = Retracted
+		dragModifier = 0.0
+	}
+}
