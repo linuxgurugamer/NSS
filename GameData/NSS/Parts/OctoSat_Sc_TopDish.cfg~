@@ -74,9 +74,8 @@ PART
 		packetResourceCost = 50
 		requiredResource = ElectricCharge
 		DeployFxModules = 0
-		antennaPower = 125000000000
+		antennaPower = 100000000000
 		ProgressFxModules = 1
-		antennaCombinable = True
 	}
 	MODULE
 	{

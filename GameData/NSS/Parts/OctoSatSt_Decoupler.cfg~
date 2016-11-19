@@ -1,6 +1,6 @@
 PART
 {
-	name = OctoSat_St_Decoupler
+	name = OctoSatSt_Decoupler
 	module = Part
 	author = Nookos
 
