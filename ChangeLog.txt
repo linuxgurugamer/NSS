@@ -1,0 +1,16 @@
+0.1.2
+		Initial release
+
+0.1.3
+		On the OctoSat Gargantuan Dish and OctoSat Side Dish:
+			Adjusted packetInterval down, they were too low which resulted in 
+				too-high a transmission rate
+			Adjusted packetResourceCost down
+			Changed to be a dual-purpose antenna with the replacemnt of 
+				ModuleDataTransmitter with SelectableDataTransmitter
+		Adjusted the values for OctoSat Core Guidance Module to be inline with
+		stock
+		Adjusted values for OctoSat Side Guidance Module to be inline with
+		stock
+
+
