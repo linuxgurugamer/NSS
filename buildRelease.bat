@@ -24,8 +24,33 @@ set HOMEDRIVE=%HOMEDIR:~0,2%
 )
 
 
-type GameData\NSS\NSSOctosat.version
-set /p VERSION= "Enter version: "
+cd GameData\NSS
+set VERSIONFILE=NSSOctosat.version
+
+rem The following requires the JQ program, available here: https://stedolan.github.io/jq/download/
+c:\local\jq-win64  ".VERSION.MAJOR" %VERSIONFILE% >tmpfile
+set /P major=<tmpfile
+
+c:\local\jq-win64  ".VERSION.MINOR"  %VERSIONFILE% >tmpfile
+set /P minor=<tmpfile
+
+c:\local\jq-win64  ".VERSION.PATCH"  %VERSIONFILE% >tmpfile
+set /P patch=<tmpfile
+
+c:\local\jq-win64  ".VERSION.BUILD"  %VERSIONFILE% >tmpfile
+set /P build=<tmpfile
+del tmpfile
+set VERSION=%major%.%minor%.%patch%
+if "%build%" NEQ "0"  set VERSION=%VERSION%.%build%
+
+type NSSOctosat.version
+
+echo Version: %VERSION%
+
+set /p newVERSION= "Enter version: "
+if "%newVERSION%" NEQ "" set VERSION=%newVERSION%
+cd ..\..
+
 
 mkdir GameData\NSS\Licenses
 xcopy /t /y /s /e Licenses GameData\NSS\Licenses
