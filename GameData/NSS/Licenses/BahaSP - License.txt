@@ -1,0 +1,12 @@
+
+- BahamutoD - 
+
+http://forum.kerbalspaceprogram.com/threads/71247-WIP-Plugin-BDAnimationModules-v0-6-1
+https://github.com/BahamutoD/BDAnimationModules
+
+This mod for Kerbal Space Program is distributed under the license CC-BY-SA.
+Please read about the license at
+
+https://creativecommons.org/licenses/by-sa/3.0/
+
+before attempting to modify and distribute it.

@@ -12,5 +12,8 @@
 		stock
 		Adjusted values for OctoSat Side Guidance Module to be inline with
 		stock
-
+0.1.4
+		Fixed MM configs for RealPlumes and ScanSat
+0.1.5
+		Fixed MM config for RT
 

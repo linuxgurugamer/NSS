@@ -52,8 +52,8 @@ if "%newVERSION%" NEQ "" set VERSION=%newVERSION%
 cd ..\..
 
 
-mkdir GameData\NSS\Licenses
-xcopy /t /y /s /e Licenses GameData\NSS\Licenses
+rem mkdir GameData\NSS\Licenses
+xcopy /y /s /e Licenses GameData\NSS\Licenses
 
  
 set FILE="%RELEASEDIR%\NSS-%VERSION%.zip"
