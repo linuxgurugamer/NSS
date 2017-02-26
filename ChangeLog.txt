@@ -17,3 +17,6 @@
 0.1.5
 		Fixed MM config for RT
 
+0.1.6
+		Added kOS processer to guidance modules
+		Reformatted cfgs to standard layout

@@ -47,8 +47,8 @@ type NSSOctosat.version
 
 echo Version: %VERSION%
 
-set /p newVERSION= "Enter version: "
-if "%newVERSION%" NEQ "" set VERSION=%newVERSION%
+rem set /p newVERSION= "Enter version: "
+rem if "%newVERSION%" NEQ "" set VERSION=%newVERSION%
 cd ..\..
 
 
