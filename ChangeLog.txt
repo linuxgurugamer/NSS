@@ -20,3 +20,6 @@
 0.1.6
 		Added kOS processer to guidance modules
 		Reformatted cfgs to standard layout
+
+0.1.7
+		updated to 1.3
