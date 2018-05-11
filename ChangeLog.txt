@@ -31,3 +31,18 @@
 		Fixed Tweakscale config
 		Added TexturesUnlimited patch, thanks @MeCripp
 		Updated for 1.4.1
+
+0.1.10
+	Really fixed the Tweakscale config
+	Replaced the Firespitter with InterstellarFuelSwitch, works better
+	Removed the SelectableDataTransmitter
+	Added new part to give a relay antenna (clone of existing)
+	Moved all MM files into a MM directory
+	Added support for PatchManager
+		Tweakscale config moved into Patchmanager
+	New config for stock texture switching added, to be used only 
+		if IFS is not installed, thanks to github user @Hexicube for
+		the stock texture configs.  This is NOT recommended for use, however
+	Updated Part Requests description for science contracts to properly
+		say which part is needed
+	Adjusted antenna ranges and power consumption 
