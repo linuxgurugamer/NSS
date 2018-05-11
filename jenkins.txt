@@ -47,8 +47,7 @@
 #7:ConnectedLivingSpace
 
 7: BahaSP
-7: Firespitter
-7: SelectableDataTransmitter
+7: InterstellarFuelSwitch
 
 # 8: AdditionalMods to include
 #8:ConnectedLivingSpace
