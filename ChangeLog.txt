@@ -46,3 +46,6 @@
 	Updated Part Requests description for science contracts to properly
 		say which part is needed
 	Adjusted antenna ranges and power consumption 
+
+0.1.10.1
+	Version bump for 1.5
