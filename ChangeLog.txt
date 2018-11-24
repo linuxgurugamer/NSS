@@ -52,3 +52,8 @@
 	
 0.1.11
 	Fixed engine exhausts
+	
+0.1.11.1
+	Fixed the TexturesUnlimited patch
+	Thanks to forum user @Wyzard:
+		Fixed internal models for the RCS modules, RCS now looks and works correctly
