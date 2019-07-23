@@ -23,7 +23,7 @@ if "%_test%" == ":" (
 set HOMEDRIVE=%HOMEDIR:~0,2%
 )
 
-
+copy NSSOctosat.version GameData\NSS
 cd GameData\NSS
 set VERSIONFILE=NSSOctosat.version
 
