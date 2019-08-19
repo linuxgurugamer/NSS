@@ -60,3 +60,10 @@
 
 0.1.12
 	Version bum pfor 1.7.2
+
+0.1.13 (unreleased)
+	Added B9PartSwitch color switching
+	Updated the NSS_MM_FSTextureSwitch2 to not load if B9 is loaded
+	Updated the stock texture switch patch for B9PartSwitch
+	Updated the RemoteTech patch (Thanks @Gordon-Dry)
+	Replaced two mbm files with dds (Thanks @zer0Kerbal)
