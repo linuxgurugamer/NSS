@@ -67,3 +67,6 @@
 	Updated the stock texture switch patch for B9PartSwitch
 	Updated the RemoteTech patch (Thanks @Gordon-Dry)
 	Replaced two mbm files with dds (Thanks @zer0Kerbal)
+
+0.1.13.1
+	Fixed fuel and texture switching, disabled B9PartSwitch for now
