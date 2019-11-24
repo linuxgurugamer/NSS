@@ -81,3 +81,7 @@ ChangeLog
 
 0.1.13.4
 	Fixed patch which was missing  ,!B9PartSwitch]
+
+0.1.13.5
+	Thanks to @Gordon-Dry
+	Fixed Tweak scale fatal error fix
