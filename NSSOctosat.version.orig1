@@ -1,0 +1,16 @@
+{
+  "NAME": "NSS-OctoSat",
+  "URL": "http://ksp.spacetux.net/avc/NSSOctosat",
+  "DOWNLOAD": "http://spacedock.info/mod/1074/OctoSat%20Continued",
+  "VERSION": {
+    "MAJOR": 0,
+    "MINOR": 1,
+    "PATCH": 13,
+    "BUILD": 5
+  },
+  "KSP_VERSION_MIN": {
+    "MAJOR": 1,
+    "MINOR": 5,
+    "PATCH": 1
+  }
+}
