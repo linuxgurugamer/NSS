@@ -89,3 +89,8 @@ ChangeLog
 0.1.14
 	Fixed deploy animation of the OctoSat_Sc_M900
 	Updated for KSP 1.8
+
+0.1.14.1
+	Thanks to @Zer0kerbal for this
+		Update OctoSat_Com_Core.cfg to fix type, changed 'eize' to 'size'
+	
