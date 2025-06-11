@@ -94,3 +94,6 @@ ChangeLog
 	Thanks to @Zer0kerbal for this
 		Update OctoSat_Com_Core.cfg to fix type, changed 'eize' to 'size'
 	
+0.1.15
+	Updated version file to use github for new version info
+	Localized the mod
